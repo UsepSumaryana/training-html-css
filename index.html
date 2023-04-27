@@ -1,95 +1,521 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Requirtment Form</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <div class="main">
-        <nav 0="" class="nav" white;="" box-shadow:="" 0px="" 4px="" 8px="" rgb(0="" z-index:="">
-            <a class="nav-item" href="https://neuronworks.co.id">
-                <img src="https://cdn.neuronworks.co.id/v0.3.8/dev/assets/img/logo/nw-horizontal.png" alt="PT. Neuronworks Indonesia" class="logo" /> </a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dashboard TobaLake</title>
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+        />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-white">
+          <div class="container-fluid p-4">
+            <a class="navbar-brand" href="#">Toba<span class="fw-bold">Lake</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled">Disabled</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
         </nav>
-        <div class="container">
-            <div class="form">
-                <div class="form-body">
-                    <div class="form-content">
-
-                        <div class="header" href="#">
-                            <div class="logo">
-                                <img src="https://cdn.neuronworks.co.id/v0.3.8/dev/assets/img/logo/logomark-sign.png" alt="Neuron 3.0" style="width: 7rem;"/>
-                            </div>
+        <div class="my-container">
+          <div class="my-flex">
+            <div class="section">
+              <h5 class="fw-bold">Kinerja Produksi</h5>
+              <div class="row mt-4 flex-column">
+                <div class="col">
+                  <div class="rounded-4 p-5 bg-white custom-shadow ">
+                    <h5 class="fw-bold">Daily</h5>
+                    <div class="row gap-3">
+                      <div class="rounded-4 p-4 my-4 bg-gray-1 col">
+                        <span class="fw-bolder text-muted fs-5">Unit 1</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <h1 class="fw-bolder">1200</h1>
+                          <span class="fs-4 fw-bolder text-muted">MWh</span>
                         </div>
-                        <div class="form-description">
-                            <h3 class="title">Form Rekrutasi</h3>
-                            <p class="caption">Isi data di bawah sesuai dengan identitas diri anda dan lowongan yang akan anda pilih</p>
-                        </div> 
-                        <form novalidate="novalidate">
-                            <input type="hidden" name="token" value="#" />
-                            <div class="form-group">
-                                <label for="fullname" class="active">Fullname<span class="text-danger">*</span></label> <input type="text" class="form-control" name="fullname" placeholder="Masukkan nama" required="" />
-                            </div>
-                            <div class="form-group">
-                                <label for="email" class="active">Email <span class="text-danger">*</span></label> <input type="email" class="form-control" name="email" placeholder="Masukkan email" required="" />
-                            </div>
-                            <div class="form-group">
-                                <label for="phone" class="active">Phone Number<span class="text-danger">*</span></label> <input type="tel" class="form-control" name="nomorhp" placeholder="Masukkan nomor telepon" required="" />
-                            </div>
-                            <div class="form-group">
-                                <label for="vacancy" class="active">Vacancy <span class="text-danger">*</span></label> <select class="form-control" name="lowongan">
-                                    <option value="" disabled="" selected="">- Pilih Lowongan -</option>
-                                    <option value="251" class="style-34">DATABASE DEVELOPER</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="position" class="active">Position <span class="text-danger">*</span></label> <select class="form-control" required="" name="posisi">
-                                    <option value="" disabled="" selected="">- Pilih Posisi -</option>
-                                    <option value="#example1">Contoh Posisi #1</option>
-                                    <option value="#example2">Contoh Posisi #2</option>
-                                    <option value="#example3">Contoh Posisi #3</option>
-                                </select>
-                            </div>
-                            <div class="form-group"></div>
-                            <div class="form-group">
-                                <button type="submit" class="btn-primary">Kirim</button>
-                            </div>
-                        </form>
+                      </div>
+                      <div class="rounded-4 p-4 my-4 bg-gray-1 col">
+                        <span class="fw-bolder text-muted fs-5">Unit 2</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <h1 class="fw-bolder">1200</h1>
+                          <span class="fs-4 fw-bolder text-muted">MWh</span>
+                        </div>
+                      </div>
+                      <div class="rounded-4 p-4 my-4 bg-gray-1 col">
+                        <span class="fw-bolder text-muted fs-5">Unit 3</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <h1 class="fw-bolder">1200</h1>
+                          <span class="fs-4 fw-bolder text-muted">MWh</span>
+                        </div>
+                      </div>
                     </div>
+                    
+                  </div>
                 </div>
-                <div class="footer">
-                    <ul class="list">
-                        <li>
-                            <a href="https://instagram.com/neuronworks" class="list-item">
-                                <i class="fab fa-instagram-square" aria-hidden="true"></i> </a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/@NeuronworksIndonesia" class="list-item">
-                                <i class="fab fa-youtube" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/neuronworks" class="list-item">
-                                <i class="fab fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/neuronworks/" class="list-item">
-                                <i class="fab fa-facebook" aria-hidden="true"></i></a>
-                        </li>
-                    </ul> 
-                    <a class="text-decoration-none" href="https://www.neuronworks.co.id" style="display:block; margin-top: 20px;">
-                        www.neuronworks.co.id
-                    </a>
+                <div class="col mt-4">
+                  <div class="row">
+                    <div class="col">
+                      <div class="rounded-4 p-5 bg-white custom-shadow ">
+                        <h5 class="fw-bold">Monthly</h5>
+                        <div class="row">
+                          <div class="rounded-4 my-4 p-4 bg-gray-1 col-12 col-md-6">
+                            <span class="fw-bolder text-muted fs-5">Total</span>
+                            <div class="d-flex justify-content-between align-items-center">
+                              <h1 class="fw-bolder">103634</h1>
+                              <span class="fs-4 fw-bolder text-muted">MWh</span>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <div class="progress bg-gray-1 my-4 rounded-4 position-relative" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="height: 120px">           
+                              <div class="progress-bar bg-gold text-start scale-up-hor-left" style="width: 70%">
+                              </div>
+                              <div class="fw-bolder position-absolute end-0 p-4 text-end">
+                                <span class="text-muted fs-5">Pencapaian</span>
+                                <h1 class="fw-bold text-align-end">70%</h1>
+                              </div>   
+                            </div>
+                          </div>                      
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mt-4 mt-lg-0">
+                      <div class=" rounded-4 p-5 bg-white custom-shadow ">
+                        <h5 class="fw-bold">Yearly</h5>
+                        <div class="row">
+                          <div class="rounded-4 my-4 p-4 bg-gray-1 col-12 col-lg-6">
+                            <span class="fw-bolder text-muted fs-5">Total</span>
+                            <div class="d-flex justify-content-between align-items-center">
+                              <h1 class="fw-bolder">1139974</h1>
+                              <span class="fs-4 fw-bolder text-muted">MWh</span>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <div class="progress bg-gray-1 my-4 rounded-4 position-relative" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="height: 120px">           
+                              <div class="progress-bar bg-gold text-start scale-up-hor-left" style="width: 75%">
+                              </div>
+                              <div class="position-absolute end-0 p-4 text-end">
+                                <span class="text-muted fs-5">Pencapaian</span>
+                                <h1 class="fw-bold text-align-end" >75%</h1>
+                              </div>   
+                            </div>
+                          </div>                      
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-            <div class="vector-container">
-                <div class="vector-background">
-                    <img src="https://cdn.neuronworks.co.id/v0.3.8/dev/assets/img/other/Starlid-illustration.svg" alt="PT Neuronworks Indonesia" class="vector-image" />
+            <div class="section mt-5">
+              <h5 class="fw-bold mb-4">Kinerja Operasi</h5>
+              <div class="row">
+                <div class="col">
+                  <div class="rounded-4 p-5 bg-white custom-shadow ">
+                    <h5 class="fw-bold">Daily</h5>
+                    <div class="progress bg-gray-1 my-4 rounded-4 position-relative" role="progressbar" aria-label="Basic example" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="height: 120px">           
+                      <div class="progress-bar bg-gold text-start scale-up-hor-left" style="width: 1%">
+                      </div>
+                      <div class="text-end position-absolute end-0 p-4">
+                        <span class="text-muted fs-5">Unit 1</span>
+                        <h1 class="fw-bolder">1%</h1>
+                      </div>   
+                    </div>
+                    <div class="progress bg-gray-1 my-4 rounded-4 position-relative" role="progressbar" aria-label="Basic example" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="height: 120px">           
+                      <div class="progress-bar bg-gold text-start scale-up-hor-left" style="width: 2%">
+                      </div>
+                      <div class="text-end position-absolute end-0 p-4">
+                        <span class="text-muted fs-5">Unit 2</span>
+                        <h1 class="fw-bolder">2%</h1>
+                      </div>   
+                    </div>
+                    <div class="progress bg-gray-1 my-4 rounded-4 position-relative" role="progressbar" aria-label="Basic example" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100" style="height: 120px">           
+                      <div class="progress-bar bg-gold text-start scale-up-hor-left" style="width: 3%">
+                      </div>
+                      <div class="text-end position-absolute end-0 p-4">
+                        <span class="text-muted fs-5">Unit 3</span>
+                        <h1 class="fw-bolder">3%</h1>
+                      </div>   
+                    </div>
+                  </div>
                 </div>
+                <div class="col-lg-4 mt-4 mt-lg-0">
+                  <div class="rounded-4 p-5 bg-white custom-shadow ">
+                    <h5 class="fw-bold">Monthly</h5>
+                    <div class="progress bg-gray-1 my-4 rounded-4 position-relative" role="progressbar" aria-label="Basic example" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="height: 120px">           
+                      <div class="progress-bar bg-gold text-start scale-up-hor-left" style="width: 70%">
+                      </div>
+                      <div class="text-end position-absolute end-0 p-4">
+                        <span class="text-muted fs-5">Total</span>
+                        <h1 class="fw-bolder">70%</h1>
+                      </div>   
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-4 mt-lg-0">
+                  <div class="rounded-4 p-5 bg-white custom-shadow ">
+                    <h5 class="fw-bold">Yearly</h5>
+                    <div class="progress bg-gray-1 my-4 rounded-4 position-relative" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="height: 120px">           
+                      <div class="progress-bar bg-gold text-start scale-up-hor-left" style="width: 75%">
+                      </div>
+                      <div class="text-end position-absolute end-0 p-4">
+                        <span class="text-muted fs-5">Total</span>
+                        <h1 class="fw-bolder">75%</h1>
+                      </div>   
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="section mt-5">
+              <h5 class="fw-bold">Kondisi Hidrologi</h5>
+              <div class="row mt-4 flex-column">
+                <div class="col">
+                  <div class="m-2 rounded-4 p-5 bg-white custom-shadow ">
+                    <h3 class="text-end"><span class="badge rounded-pill text-bg-primary p-3">Discharge</span></h3>
+                    <h5 class="fw-bold">Daily</h5>
+                    <div class="row gap-3">
+                      <div class="rounded-4 p-4 my-4 bg-gray-1 col">
+                        <span class="fw-bolder text-muted fs-5">Unit 1 Avg</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <h1 class="fw-bolder">55,00</h1>
+                          <span class="fs-4 fw-bolder text-muted">m3/s</span>
+                        </div>
+                      </div>
+                      <div class="rounded-4 p-4 my-4 bg-gray-1 col">
+                        <span class="fw-bolder text-muted fs-5">Unit 2 Avg</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <h1 class="fw-bolder">56,00</h1>
+                          <span class="fs-4 fw-bolder text-muted">m3/s</span>
+                        </div>
+                      </div>
+                      <div class="rounded-4 p-4 my-4 bg-gray-1 col">
+                        <span class="fw-bolder text-muted fs-5">Unit 3 Avg</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <h1 class="fw-bolder">55,5</h1>
+                          <span class="fs-4 fw-bolder text-muted">m3/s</span>
+                        </div>
+                      </div>
+                    </div>
+                    <h5 class="fw-bold">Monthly</h5>
+                    <div class="row gap-3">
+                      <div class="rounded-4 p-4 my-4 bg-gray-1 col">
+                        <span class="fw-bolder text-muted fs-5">Unit 1 Avg</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <h1 class="fw-bolder">45,46</h1>
+                          <span class="fs-4 fw-bolder text-muted">m3/s</span>
+                        </div>
+                      </div>
+                      <div class="rounded-4 p-4 my-4 bg-gray-1 col">
+                        <span class="fw-bolder text-muted fs-5">Unit 2 Avg</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <h1 class="fw-bolder">51,32</h1>
+                          <span class="fs-4 fw-bolder text-muted">m3/s</span>
+                        </div>
+                      </div>
+                      <div class="rounded-4 p-4 my-4 bg-gray-1 col">
+                        <span class="fw-bolder text-muted fs-5">Unit 3 Avg</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <h1 class="fw-bolder">48,39</h1>
+                          <span class="fs-4 fw-bolder text-muted">m3/s</span>
+                        </div>
+                      </div>
+                    </div>
+                    <h5 class="fw-bold">Yearly</h5>
+                    <div class="row gap-3">
+                      <div class="rounded-4 p-4 my-4 bg-gray-1 col">
+                        <span class="fw-bolder text-muted fs-5">Unit 1 Avg</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <h1 class="fw-bolder">58,76</h1>
+                          <span class="fs-4 fw-bolder text-muted">m3/s</span>
+                        </div>
+                      </div>
+                      <div class="rounded-4 p-4 my-4 bg-gray-1 col">
+                        <span class="fw-bolder text-muted fs-5">Unit 2 Avg</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <h1 class="fw-bolder">60,85</h1>
+                          <span class="fs-4 fw-bolder text-muted">m3/s</span>
+                        </div>
+                      </div>
+                      <div class="rounded-4 p-4 my-4 bg-gray-1 col">
+                        <span class="fw-bolder text-muted fs-5">Unit 3 Avg</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <h1 class="fw-bolder">59,805</h1>
+                          <span class="fs-4 fw-bolder text-muted">m3/s</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-4 flex-column">
+                <div class="col">
+                  <div class="m-2 rounded-4 p-5 bg-white custom-shadow ">
+                    <h3 class="text-end"><span class="badge rounded-pill text-bg-warning p-3">Water Level</span></h3>
+                    <div class="row gap-3">
+                      <div class="col">
+                        <h5 class="fw-bold">Daily</h5>
+                        <div class="rounded-4 p-4 my-4 bg-gray-1">
+                          <span class="fw-bolder text-muted fs-5">Avg</span>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <h1 class="fw-bolder">56,00</h1>
+                            <span class="fs-4 fw-bolder text-muted">m3/s</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <h5 class="fw-bold">Monthly</h5>
+                        <div class="rounded-4 p-4 my-4 bg-gray-1">
+                          <span class="fw-bolder text-muted fs-5">Avg</span>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <h1 class="fw-bolder">56,00</h1>
+                            <span class="fs-4 fw-bolder text-muted">m3/s</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <h5 class="fw-bold">Yearly</h5>
+                        <div class="rounded-4 p-4 my-4 bg-gray-1">
+                          <span class="fw-bolder text-muted fs-5"> Avg</span>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <h1 class="fw-bolder">56,00</h1>
+                            <span class="fs-4 fw-bolder text-muted">m3/s</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section mt-5">
+              <h5 class="fw-bold">Pemeliharaan sungai</h5>
+              <div class="row mt-5 ">
+                <div class="col">
+                  <div class="rounded-4 p-5 bg-white custom-shadow">
+                    <div class="d-flex justify-content-center">
+                      <span class="fs-3 fw-bolder text-center w-100">Trashboom 1</span>
+                    </div>
+                    <div class="rounded-4 p-3 pt-4 bg-gray-1 mt-4 bg-black-1 text-white">
+                      <span class="border rounded-pill px-3 py-2">Plastik</span>
+                      <div class="d-flex justify-content-between mt-3 px-3">
+                        <div class="col">
+                          <span>Volume</span>
+                          <h1 class="fw-bolder">2m3</h1>
+                        </div>
+                        <div class="col text-end">
+                          <span>Pencapaian</span>
+                          <h1 class="fw-bolder">76%</h1>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rounded-4 p-3 pt-4 bg-gray-1 mt-4 bg-gold text-white">
+                      <span class="border rounded-pill px-3 py-2">Eceng Gondok</span>
+                      <div class="row justify-content-between mt-3 px-3">
+                        <div class="col">
+                          <span>Volume</span>
+                          <h1 class="fw-bolder">2m3</h1>
+                        </div>
+                        <div class="col text-end">
+                          <span>Pencapaian</span>
+                          <h1 class="fw-bolder">76%</h1>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rounded-4 p-3 pt-4 bg-gray-1 mt-4 bg-purple-1 text-white">
+                      <span class="border rounded-pill px-3 py-2">Lain - lain</span>
+                      <div class="row justify-content-between mt-3 px-3">
+                        <div class="col">
+                          <span>Volume</span>
+                          <h1 class="fw-bolder">2m3</h1>
+                        </div>
+                        <div class="col text-end">
+                          <span>Pencapaian</span>
+                          <h1 class="fw-bolder">76%</h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mt-4 mt-md-0">
+                  <div class="rounded-4 p-5 bg-white custom-shadow">
+                    <div class="d-flex justify-content-center">
+                      <span class="fs-3 fw-bolder text-center w-100">Trashboom 2</span>
+                    </div>
+                    <div class="rounded-4 p-3 pt-4 bg-gray-1 mt-4 bg-black-1 text-white">
+                      <span class="border rounded-pill px-3 py-2">Plastik</span>
+                      <div class="row justify-content-between mt-3 px-3">
+                        <div class="col">
+                          <span>Volume</span>
+                          <h1 class="fw-bolder">2m3</h1>
+                        </div>
+                        <div class="col text-end">
+                          <span>Pencapaian</span>
+                          <h1 class="fw-bolder">76%</h1>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rounded-4 p-3 pt-4 bg-gray-1 mt-4 bg-gold text-white">
+                      <span class="border rounded-pill px-3 py-2">Eceng Gondok</span>
+                      <div class="row justify-content-between mt-3 px-3">
+                        <div class="col">
+                          <span>Volume</span>
+                          <h1 class="fw-bolder">2m3</h1>
+                        </div>
+                        <div class="col text-end">
+                          <span>Pencapaian</span>
+                          <h1 class="fw-bolder">76%</h1>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rounded-4 p-3 pt-4 bg-gray-1 mt-4 bg-purple-1 text-white">
+                      <span class="border rounded-pill px-3 py-2">Lain - lain</span>
+                      <div class="row justify-content-between mt-3 px-3">
+                        <div class="col">
+                          <span>Volume</span>
+                          <h1 class="fw-bolder">2m3</h1>
+                        </div>
+                        <div class="col text-end">
+                          <span>Pencapaian</span>
+                          <h1 class="fw-bolder">76%</h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col mt-4 mt-md-0">
+                  <div class="rounded-4 p-5 bg-white custom-shadow">
+                    <div class="d-flex justify-content-center">
+                      <span class="fs-3 fw-bolder text-center w-100">Intake Rack</span>
+                    </div>
+                    <div class="rounded-4 p-3 pt-4 bg-gray-1 mt-4 bg-black-1 text-white">
+                      <span class="border rounded-pill px-3 py-2">Plastik</span>
+                      <div class="row justify-content-between mt-3 px-3">
+                        <div class="col">
+                          <span>Volume</span>
+                          <h1 class="fw-bolder">2m3</h1>
+                        </div>
+                        <div class="col text-end">
+                          <span>Pencapaian</span>
+                          <h1 class="fw-bolder">76%</h1>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rounded-4 p-3 pt-4 bg-gray-1 mt-4 bg-gold text-white">
+                      <span class="border rounded-pill px-3 py-2">Eceng Gondok</span>
+                      <div class="row justify-content-between mt-3 px-3">
+                        <div class="col">
+                          <span>Volume</span>
+                          <h1 class="fw-bolder">2m3</h1>
+                        </div>
+                        <div class="col text-end">
+                          <span>Pencapaian</span>
+                          <h1 class="fw-bolder">76%</h1>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rounded-4 p-3 pt-4 bg-gray-1 mt-4 bg-purple-1 text-white">
+                      <span class="border rounded-pill px-3 py-2">Lain - lain</span>
+                      <div class="row justify-content-between mt-3 px-3">
+                        <div class="col">
+                          <span>Volume</span>
+                          <h1 class="fw-bolder">2m3</h1>
+                        </div>
+                        <div class="col text-end">
+                          <span>Pencapaian</span>
+                          <h1 class="fw-bolder">76%</h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mt-4 mt-md-0">
+                  <div class="rounded-4 p-5 bg-white custom-shadow">
+                    <div class="d-flex justify-content-center">
+                      <span class="fs-3 fw-bolder text-center w-100">Spiral Case</span>
+                    </div>
+                    <div class="rounded-4 p-3 pt-4 bg-gray-1 mt-4 bg-black-1 text-white">
+                      <span class="border rounded-pill px-3 py-2">Plastik</span>
+                      <div class="row justify-content-between mt-3 px-3">
+                        <div class="col">
+                          <span>Volume</span>
+                          <h1 class="fw-bolder">2m3</h1>
+                        </div>
+                        <div class="col text-end">
+                          <span>Pencapaian</span>
+                          <h1 class="fw-bolder">76%</h1>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rounded-4 p-3 pt-4 bg-gray-1 mt-4 bg-gold text-white">
+                      <span class="border rounded-pill px-3 py-2">Eceng Gondok</span>
+                      <div class="row justify-content-between mt-3 px-3">
+                        <div class="col">
+                          <span>Volume</span>
+                          <h1 class="fw-bolder">2m3</h1>
+                        </div>
+                        <div class="col text-end">
+                          <span>Pencapaian</span>
+                          <h1 class="fw-bolder">76%</h1>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rounded-4 p-3 pt-4 bg-gray-1 mt-4 bg-purple-1 text-white">
+                      <span class="border rounded-pill px-3 py-2">Lain - lain</span>
+                      <div class="row justify-content-between mt-3 px-3">
+                        <div class="col">
+                          <span>Volume</span>
+                          <h1 class="fw-bolder">2m3</h1>
+                        </div>
+                        <div class="col text-end">
+                          <span>Pencapaian</span>
+                          <h1 class="fw-bolder">76%</h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</body>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+    </body>
 </html>
